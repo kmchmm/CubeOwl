@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box active" onmouseover="toggleActive(this)">
+            <div>
+                <h1><i class="fa fa-plane"></i></h1>
+                <div>
+                    <h3>Basic</h3>
+                    <small>Published to 100+ news sites <span><img src="images/arrowicon.png" alt=""></span></small>
+                </div>
+                <div class="price">
+                    &#36; 74.99 <small>Per release <span>&#x24D8;</span></small>
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li><small><i class="fa fa-check-circle"></i>Published on digital journal</small></li>
+                    <li><small><i class="fa fa-check-circle"></i>Sent to google news</small></li>
+                    <li><small><i class="fa fa-check-circle"></i>And many more</small></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box" onmouseover="toggleActive(this)">
+            <div>
+                <h1><i class="fa fa-rocket"></i></h1>
+                <div>
+                    <h3>US National</h3>
+                    <small>Published to 200+ news sites <span><img src="images/arrowicon.png" alt=""></span></small>
+                </div>
+                <div class="price">
+                    &#36; 419.99 <small>Per release <span>&#x24D8;</span></small>
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li><small><i class="fa fa-check-circle"></i>Published on digital journal</small></li>
+                    <li><small><i class="fa fa-check-circle"></i>Published on PRnewswire.com</small></li>
+                    <li><small><i class="fa fa-check-circle"></i>Published on Yahoo finance</small></li>
+                    <li><small><i class="fa fa-check-circle"></i>Sent to market watch</small></li>
+                    <li><small><i class="fa fa-check-circle"></i>Sent to google news</small></li>
+                    <li><small><i class="fa fa-check-circle"></i>And many more</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleActive(box) {
+            const boxes = document.querySelectorAll('.box');
+            boxes.forEach(b => {
+                if (b !== box) {
+                    b.classList.remove('active');
+                }
+            });
+            box.classList.add('active');
+        }
+
+        // Set the first box as active by default
+        const defaultBox = document.querySelector('.box.active');
+        toggleActive(defaultBox);
+    </script>
+</body>
+</html>
